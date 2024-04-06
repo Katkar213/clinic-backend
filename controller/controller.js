@@ -10,6 +10,10 @@ const getalldata=(req,res)=>{
     }
 
 }
+
+
+
+
 module.exports={getalldata};
 
 

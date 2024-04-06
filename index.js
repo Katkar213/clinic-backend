@@ -4,6 +4,7 @@ const morgan=require("morgan");
 const port=process.env.PORT || 4001;
 const route=require("./routes/routes")
 const connection=require("./config/db");
+const adminroutes=require("./routes/adminRoutes")
 
 
 const app=express();
@@ -15,6 +16,8 @@ app.use(express.json());
 
 // routes.............
 app.use("/api",route)
+
+app.use("/api",adminroutes)
 
 
 app.listen(port, async()=>{
